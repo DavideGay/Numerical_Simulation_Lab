@@ -1,0 +1,21 @@
+SIMULATION_TYPE        2/3    1.0    0.0
+RESTART                0
+TEMP                   2
+EQUILIBRATED	       0
+NPART                  50
+RHO                    1.0
+R_CUT                  0.0
+DELTA                  0.0
+NBLOCKS                5000
+NSTEPS                 1
+
+ENDINPUT
+
+NOTA: 2 is for m(rt)^2 algorithm; 3 is for gibbs algorithm
+2nd digit is J
+3rd digit is H
+
+R_CUT, DELTA are set to zero as they are not needed
+-> I have no control over acceptance (metropolis)
+-> when simulating at high temp, system is highly ergodic;
+at low temp, possibly problematic!

@@ -1,0 +1,16 @@
+        double x=rnd.Rannyu(-L,L);
+      double y=rnd.Rannyu(0,L);
+      while(y>sqrt(pow(L,2)-pow(p2,2))){
+         x=rnd.Rannyu(-L,L);
+         y=rnd.Rannyu(0,L);
+      }
+      double ang= atan(y/x);
+      double p2 = p1+ (L*cos(ang));
+
+      double sign=0;
+      if(x>0){sign=1;}else{sign=-1;}
+
+      //p2=sign* L* sqrt( 1/(1+pow(y/x,2)) ); 
+      //cout << p2 << " " << y << endl;
+
+      p2+=p1;

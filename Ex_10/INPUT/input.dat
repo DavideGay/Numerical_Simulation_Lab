@@ -1,0 +1,15 @@
+CITIES_TYPE 3
+N_CITIES 34
+POPULATION_SIZE 500
+MUTATION_PROBABILITY 0.09
+N_GENERATIONS 500
+
+ENDINPUT
+
+Possible CITIES_TYPE values:
+ 0: equally spaced cities on unit circumference
+ 1: randomly located cities on unit circumference
+ 2: randomly located cities inside (0,1)x(0,1) square
+ 3: read from file coordinates.dat
+ 
+ Reading from coordinates.dat overrides the N_CITIES input!

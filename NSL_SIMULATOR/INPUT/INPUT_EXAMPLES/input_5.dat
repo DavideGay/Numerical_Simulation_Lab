@@ -1,0 +1,35 @@
+SIMULATION_TYPE        0
+RESTART                0
+TEMP                   0.97
+NPART                  108
+RHO                    0.05
+R_CUT                  5
+DELTA                  0.0005
+NBLOCKS                20
+NSTEPS                 1000
+
+ENDINPUT
+
+goal temp: 1.1
+problem: partendo da una configurazione a bassa en. pot, i moti dovuti alla temperatura portano il sistema in configurazione diversa a maggiore energia pot -> minore en. cinetica -> minore temp di quella di partenza
+Strategy: prima testo varie temp per trovare quella che si stabilizza alla temp desiderata; poi uso la config finale come starting config a temp voluta per una rerun
+QUESTO VALE PER LIQUIDI E (MENO) PER SOLIDI
+
+LIQUIDO:
+TEMP                   1.96
+NPART                  108
+RHO                    0.8
+R_CUT                  2.5
+Arriva intorno alla goal temp dopo circa 200 steps (1000 for safety)
+
+SOLIDO:
+TEMP                   1.45
+NPART                  108
+RHO                    1.1
+R_CUT                  2.2
+
+GAS:
+TEMP                   0.97
+NPART                  108
+RHO                    0.05
+R_CUT                  5
