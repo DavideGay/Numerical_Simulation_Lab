@@ -63,6 +63,7 @@ void Population :: initialize(int setrank){
     mutation_prob=0.;
     N_generations=0;
     rank=setrank;
+    migrations=0;
 
     ifstream input("../INPUT/input.dat"); // Start reading ../INPUT/input.dat
     string property;
@@ -109,6 +110,8 @@ void Population :: initialize(int setrank){
                 cerr << "PROBLEM: invalid number of generations" << endl;
                 exit(EXIT_FAILURE);
             } else N_generations=N_gen;
+        } else if(property == "MIGRATIONS" ){
+            input >> migrations;
         } else cerr << "PROBLEM: unknown input" << endl;
     }
     input.close();
@@ -465,6 +468,10 @@ int Population::get_N_cities(){
 
 int Population::get_N_generations(){
     return N_generations;
+}
+
+bool Population::migrate(){
+    return migrations;
 }
 
 void Population::set_path(int index, Path& path){

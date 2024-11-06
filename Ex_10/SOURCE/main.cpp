@@ -48,12 +48,15 @@ int main (int argc, char *argv[]){
     continent.fitness_sort();
 
     //////// MIGRATION ////////////////////////////////
-    if(i>1 && i%N_migration==0){
+    if(i>1 && i%N_migration==0 && continent.migrate()){
 
       vector<int> emigrant = continent.get_single_path(0);
       vector<int> immigrant(continent.get_N_cities());
       MPI_Status status;
-
+      if(i<N_migration +2){
+        cout << "Process #" << rank << ": migrations applied" << endl;
+      }
+      
       int dest = (rank + 1) % size;
       int source = (rank - 1 + size) % size;
       MPI_Sendrecv(emigrant.data(), emigrant.size(), MPI_INT, dest, 0, 

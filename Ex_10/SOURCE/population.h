@@ -17,6 +17,7 @@ private:
   double mutation_prob;
   int N_generations;
   int rank;
+  bool migrations;
 
 public:
   Population();   // default constructor
@@ -33,6 +34,7 @@ public:
   int get_pop_size();
   int get_N_cities();
   int get_N_generations();
+  bool migrate();
   vector<Path> get_population();
   Random get_rnd();
   void set_path(int index, Path& path);
