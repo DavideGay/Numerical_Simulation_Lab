@@ -1,5 +1,5 @@
 ## Instructions - NSL_SIMULATOR
-SOURCE contains source code for each of the exercises.
+SOURCE contains source code for the NSL_SIMULATOR.
 - To compile, hit `make`.
 - To run the executable, `./main.exe`
 
