@@ -22,7 +22,6 @@ int main (int argc, char *argv[]){
   SYS.block_reset(0);
 
   // equilibration run
-  // 1000 for liquid, solid; 5000 for gas (or even 7500, 10000); 10000 for ising
   
   /*for(int i=0; i < 10000; i++){
     SYS.step();
@@ -40,8 +39,8 @@ int main (int argc, char *argv[]){
     }
     SYS.averages(i+1);
     
-    if(i==SYS.get_nbl()-1){   // to be used with ising
-      SYS.measure_outputs(i+1);
+    if(i==SYS.get_nbl()-1){
+      SYS.measure_outputs(i+1);   // works with ising model (SIM_TYPE 2,3); otherwise no effect
     }
 
     SYS.block_reset(i+1);
