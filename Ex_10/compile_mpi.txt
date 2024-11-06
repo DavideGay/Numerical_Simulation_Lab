@@ -1,5 +1,0 @@
-Compile with:
-mpicxx main.cpp random.cpp city.cpp path.cpp population.cpp -o main
-
-Run with:
-mpiexec -np Number_of_processes main
